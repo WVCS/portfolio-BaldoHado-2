@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #DFE0E2;
+  margin: 0px;
+}
+
+.navbar {
+  background-color: #23B5D3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 7em;
+}
+
+.navbar a:hover {
+  background-color: #071013;
+  color: #DFE0E2;
+}
+
+.container {
+  height: 100vh;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 50%;
+  height: 80%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+}
+.grid-item {
+  background-color: #75ABBC;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  border: 2px #071013 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+  </style>
+</head>
+<body>
+  <div class="navbar">
+  <a href="#home">HOME</a>
+  <a href="#news">NEWS</a>
+  <a href="#contact">CONTACT</a>
+  <a href="#about">ABOUT</a>
+</div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="grid-container">
+        <div class="grid-item">
+          <p>US Open Website
+          <br>
+            <a href="https://codepen.io/Sweggypotato/full/pojNwJX">Click Here</a>
+          </p>
+          
+        </div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+     </div>
+    </div>
+  </div>
+</body>
+</html>
