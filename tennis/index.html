@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript">
+  window.onscroll = () => {
+  const nav = document.querySelector('#navbar');
+  if(this.scrollY <= 20) nav.className = ''; else nav.className = 'scroll';
+};
+  </script>
+  <style> 
+@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway|Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+html {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  min-height: 200vh;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  margin: 0;
+  background-color: #3C3C3C;
+  height: 350vh;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 4em;
+  width: 100%;
+  color: #E5F4E3;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 12px 18px;
+  transition: background-color 0.4s ease-out;
+  z-index: 2;
+}
+
+nav span {
+  font-weight: bold;
+  letter-spacing: .085em;
+  text-align: center;
+  font-style: italic;
+  top: -1em;
+  vertical-align: middle;
+}
+
+.imgus {
+  min-height: 2em;
+  height: 100%;
+  width: 200px;
+}
+
+
+#navbar {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.aclass {
+  position: absolute;
+  top: 0.8em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  left: 52.7%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.bclass {
+  position: absolute;
+  top: 0.8em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  left: 68.4%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+}
+
+.cclass {
+  position: absolute;
+  top: 0.8em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  left: 37%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+nav.scroll {
+  background-color: #3C3C3C;
+  color: #eef;
+}
+
+nav.scroll:hover {
+  text-decoration: underline;
+}
+
+.mainimg {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  text-align: center;
+  border-bottom: 2px black solid;
+}
+
+#mainimg {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.maintext {
+  height: 180vh;
+  position: relative;
+  width: 60vw;
+}
+
+.wrapper {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  background-color: transparent;
+  padding: 20px;
+  margin: 0;
+  height: 100%;
+  grid-gap: 40px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.grid-item {
+  background-color: #003F91;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 10px black;
+  color: #E5F4E3;
+  font-family: 'Bree Serif', serif;
+}
+
+.imggrid {
+  height: 70%;
+  width: 100%;
+  margin: 0;
+}
+
+.pgrid {
+  margin: 0;
+  padding: 5px;
+}
+
+.bgrid {
+  background-color: white;
+  width: 60%;
+  height: 10%;
+  border: 2px #3C3C3C solid;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #31302B;
+  -webkit-transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+
+.bgrid:hover {
+  box-shadow: inset 400px 0 0 0 red;
+  background-color: black;
+}
+    
+@media screen and (max-width: 1200px) {
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 25% 25% 25%;
+  background-color: transparent;
+  padding: 20px;
+  margin: 0;
+  height: 100%;
+  grid-gap: 40px;
+  font-family: 'Cabin', sans-serif;
+}
+}
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQrrTBZAwxNelxy1OX7Xw6VugOEwuGCpyjxwvbS4apsb_nPDwe7MvRVPqJhW7LrL81VvJ7Fp11Qd_KD/pub?w=433&h=100" class="imgus"><span></span>
+    <div class="navbaa">
+      <a href="https://www.google.com/" class="aclass">CALENDAR</a>
+      <a href="https://www.google.com/" class="bclass">CONTACT</a>
+      <a href="https://www.google.com/" class="cclass">ABOUT</a>
+    </div>
+  </nav>
+  <div class="mainimg">
+    <img src="https://www.essentiallysports.com/wp-content/uploads/us-open-flushing-meadows-1.jpg" id="mainimg">
+  </div>
+  <div class="wrapper">
+  <div class="maintext">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://www.usopen.org/images/pics/large/f_2018_ballperson_tryouts_10.jpg" class="imggrid">
+        <p class="pgrid">
+       In need of volunteers and ball boys! All volunteers will receive a US Open Polo Shirt.</p>
+        
+        <button class="bgrid">Submit a Form</button>
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/images/outbreak-coronavirus-world-1024x506px.jpg" class="imggrid">
+        <p class="pgrid">
+       This year's US Open may be delayed due to Covid-19.</p>
+        
+        <button class="bgrid">Learn More</button>       
+      </div>
+      <div class="grid-item">
+        <img src="https://i.insider.com/5d0150e06fc9200b5a05f042?width=1100&format=jpeg&auto=webp" class="imggrid">
+        <p class="pgrid">
+       Planning on travelling to NYC for the US Open? Check out all the other fun stuff in NYC during your trip.</p>
+        
+        <button class="bgrid">Explore</button>    
+      </div>  
+      <div class="grid-item">
+        <img src="https://www.weather-us.com/weather/images/climate/9/3/2372139-500-daylight_sunshine-en.gif" class="imgggrid">
+        <p class="pgrid">
+       </p>
+        
+        <button class="bgrid">Explore Weather </button> 
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
