@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #1a1919;
+  margin: 0px;
+}
+
+.navbar {
+  background-color: #e01010;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  width: 7em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  width: 2em;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #DFE0E2;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  font-family: 'Fugaz One', cursive;
+  
+}
+
+
+.udg {
+  width: 8%;
+  margin: 5px;
+  position: absolute;
+  z-index: 10;
+}
+
+.item1 { 
+  grid-area: Small;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 15px #e01010 solid;
+  border-bottom: 15px #e01010 solid;
+  border-top: 15px #e01010 solid;
+}
+.item2 {
+  grid-area: Med;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right:  15px #e01010 solid;
+  border-bottom: 15px #e01010 solid;
+}
+.item3 { 
+  grid-area: Big; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1919;
+  border-top: 15px #e01010 solid;
+  border-bottom: 15px #e01010 solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'Small Small Big Big Big'
+    'Small Small Big Big Big'
+    'Med Med Big Big Big'
+    'Med Med Big Big Big';
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  color: white;
+}
+
+.imggrid {
+  width: 50%;
+  height: 100%;
+}
+
+.container1 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  height: 100%;
+  z-index: 1;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+  height: 100%;
+  width: 100%;
+}
+
+.fade2 {
+  -webkit-animation-name: fade2;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade2;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade2 {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade2 {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.container2 {
+  height: 130vh;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper3 {
+  width: 100%;
+  height: 10vh;
+  background-color: #1a1919;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px #e01010 solid;
+  color: white;
+}
+
+.wrapper4 {
+  width: 100%;
+  height: 90vh;
+  background-color: #1a1919;
+  padding: 20px 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wrappertext {
+  width: 50%;
+  height: 100%;
+}
+
+.ul1 li {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-color: #e01010;
+  border-radius: 50px;
+  position: relative;
+  padding: 10px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.h1f {
+  width: 88%;
+}
+
+table, th, td {
+  border: 3px solid #1a1919;
+  border-collapse: collapse;
+  height: 5vh;
+  font-size: 30px;
+  font-weight: bold;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .wrappertext {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+.container3 {
+  height: 30vh;
+}
+
+.h23f {
+  color: white;
+  text-align: center;
+  
+}
+</style>
+<script> 
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
+
+var slideIndex = 0;
+showSlides();
+</script>
+</head>
+<body>
+  <div class="navbar" id="home">
+  <img src="https://docs.google.com/drawings/d/e/2PACX-1vTAUO6MSt6mUUjTHo_lvMkBkCTDOVnbqE6TVBgW4f4V0JKMZhXaNEkeu5FIA7zyHC9OR2PUWv5XVBoJ/pub?w=174&h=158" class="udg">
+  <a href="#home">HOME</a>
+  <a href="#news">NEWS</a>
+  <a href="none" class="hidden"></a>
+  <a href="#contact">CONTACT</a>
+  <a href="#about">ABOUT</a>
+</div>
+  <div class="container1">
+    <div class="wrapper1">
+      <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1520092352425-9699926a9b0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+          </div>
+
+          <div class="mySlides fade">
+             <img src="https://images.unsplash.com/photo-1555617778-02518510b9fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+          </div>
+
+          <div class="mySlides fade">
+             <img src="https://images.unsplash.com/photo-1548686304-89d188a80029?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+          </div>
+      </div> 
+    </div>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="grid-container" id="news">
+        <div class="item1"> Check Out Our Merchandise!</div>
+        <div class="item2"> Newest Member: <u> Johsn</u></div>
+        <div class="item3"> <img src ="https://docs.google.com/drawings/d/e/2PACX-1vQuuClKXKBpLqR3EprOap1JfS8l_K6zKubVelMEmTeZdxWkEXXgylFl8A6PxISVFukPZAHLZGfkA_97/pub?w=487&h=556" ></div>  
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="wrapper3" id="about">
+      <h1>About Us</h1>
+    </div>
+    <div class="wrapper4">
+      <div class="wrappertext">
+        <div class="jumbotron">
+          <div class="h1f">
+      <h1> UDG was developed in 2017 by Adam Ta. Adam Ta was a gaming addict that loved watching esports and also was fairly wealthy. He made the decision to create the eSports team FKC, which didn't work out well and was a failure. After revising his plan and fixing his mistakes, he founded UDG. The first game UDG competed in was League of Legends. Fast forward a few years and now we compete in 10+ games, ranging from games like Hearthstone to FPS (first person shooter) games like Valorant. </h1>
+         </div>
+      </div>
+        <br>
+        <div class="jumbotron">
+          <div class="h1f">
+            <h1><u>A Few of Our Competitive Games</u></h1>
+            <ul class="ul1">
+              <li>Overwatch</li>
+              <li>League of Legends</li>
+              <li>Hearthstone</li>
+              <li>Valorant</li>
+              <li>CS:GO</li>
+            </ul>
+        </div>
+      </div>
+        <br>
+        <div class="jumbotron">
+          <div class="h1f">
+            <h1>Our Top Players</h1>
+            <table style="width:100%">
+              <tr>
+                <th>Username</th>
+                <th>Game</th> 
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Kveiti</td>
+                <td>League of Legends</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>Kinerja</td>
+                <td>Overwatch</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Slagathor</td>
+                <td>Hearthstone</td>
+                <td>22</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container3" id="contact">
+    <h1 class="h23f">Feel free to contact us at UDGesports@gmail.com with any questions or concerns!
+    <br>
+    <br>
+       Thank you for visiting our page!
+    </h1>
+  </div>
+</body>
+</html>
